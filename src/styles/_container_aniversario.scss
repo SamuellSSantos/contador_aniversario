@@ -1,0 +1,72 @@
+    /* Reset básico */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /* Estilo do corpo da página */
+    body {
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Container principal */
+    .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 960px;
+    background-color: #db3c41;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &__title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    }
+
+    &__contador {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+
+    &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__label {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+
+    &__value {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #db3c41;
+    }
+    }
+    }
+    }
