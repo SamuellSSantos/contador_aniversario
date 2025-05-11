@@ -1,72 +1,119 @@
-    /* Reset básico */
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Estilo do corpo da página */
-    body {
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center;     /* Alinha verticalmente */
-    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Container principal */
-    .container {
-    display: flex;
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #db3c41;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.container__title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.container__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Lista do contador */
+.container__contador {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Itens do contador */
+.container__contador__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__contador__item__label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.container__contador__item__value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .container__title {
+    font-size: 2.5rem;
+  }
+
+  .container__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .container__contador {
     flex-direction: column;
-    margin: auto;
-    max-width: 960px;
-    background-color: #db3c41;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+  }
 
-    &__title {
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 1rem;
-    }
+  .container__contador__item__label {
+    font-size: 1rem;
+  }
 
-    &__subtitle {
+  .container__contador__item__value {
     font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 2rem;
-    }
+  }
+}
 
-    &__contador {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
+/* Media Queries para telas muito pequenas (ex: smartphones antigos) */
+@media (max-width: 480px) {
+  .container__title {
+    font-size: 2rem;
+  }
 
-    &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 100px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .container__subtitle {
+    font-size: 1rem;
+  }
 
-    &__label {
-        font-size: 1rem;
-        color: #666;
-        margin-bottom: 0.5rem;
-    }
+  .container__contador {
+    gap: 10px;
+  }
 
-    &__value {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #db3c41;
-    }
-    }
-    }
-    }
+  .container__contador__item__label {
+    font-size: 0.9rem;
+  }
+
+  .container__contador__item__value {
+    font-size: 1.2rem;
+  }
+}
